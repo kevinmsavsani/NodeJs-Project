@@ -10,13 +10,15 @@ var app = express();
 app.set('view engine', 'ejs'); 
 
 app.get('/', (req, res)=>{ 
-  
+
 // The render method takes the name of the HTML 
-// page to be rendered as input 
-// This page should be in the views folder 
-// in the root directory. 
-res.render('home'); 
-  
+// page to be rendered as input. 
+// This page should be in views folder in 
+// the root directory. 
+// We can pass multiple properties and values 
+// as an object, here we are passing the only name 
+res.render('home', {name:'kevin'}); 
+
 }); 
 
 var server = app.listen(4000, function(){ 
