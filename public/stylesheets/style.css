@@ -1,5 +1,53 @@
-.sidebar-nav {
-    margin-top: 20px;
-    padding: 0;
-    list-style: none;
+
+.header {
+  padding: 50px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+.vertical-menu {
+  width: 300px; /* Set a width if you like */
+}
+
+.vertical-menu a {
+  background-color: #eee; /* Grey background color */
+  color: black; /* Black text color */
+  display: block; /* Make the links appear below each other */
+  padding: 24px; /* Add some padding */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc; /* Dark grey background on mouse-over */
+}
+
+.vertical-menu a.active {
+  background-color: #4CAF50; /* Add a green color to the "active/current" link */
+  color: white;
+}
+
+h2 {
+  text-align: center;
+}
+
+ul {
+  list-style: none; /* Remove list bullets */
+  padding: 0;
+  font-size:20px;
+}
+
+p {
+  font-size:20px;
+  padding-left: 16px;
+}
+
+li {
+  font-size:20px;
+  padding-left: 16px;
+}
+
+li:before {
+  padding-right: 8px;
+  color: blue; /* Or a color you prefer */
 }

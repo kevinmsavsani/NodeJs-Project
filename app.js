@@ -16,7 +16,7 @@ app.listen(app.get('port'));
 
 //Set up mongoose connection
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb+srv://kevin:Tesco2019@cluster0-ph5lo.mongodb.net/local_library?retryWrites=true&w=majority';
+var mongoDB = 'mongodb+srv://kevin:z6Z2K1djNsGGtRmW@cluster0-ph5lo.mongodb.net/local_library?retryWrites=true&w=majority';
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));

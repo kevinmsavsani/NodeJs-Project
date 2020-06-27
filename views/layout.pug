@@ -4,36 +4,51 @@ html(lang='en')
     title= title
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(rel="stylesheet", href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
-    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js')
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body
+
+  body(style="background-color:#fff")
+    // Header
+    .header
+      h1 My Website
+    // Navigation Bar
+    nav.navbar.navbar-inverse
+      .container-fluid
+        .navbar-header
+          a.navbar-brand(href='#') Curiosity
+        ul.nav.navbar-nav
+          li.active
+            a(href='#') Home
+          li
+            a(href='/catalog') Library
+
+        ul.nav.navbar-nav.navbar-right
+          li
+            a(href='#')
+              span.glyphicon.glyphicon-user
+              |  Sign Up
+          li
+            a(href='#')
+              span.glyphicon.glyphicon-log-in
+              |  Login
+
     div(class='container-fluid')
       div(class='row')
         div(class='col-sm-2')
           block sidebar
-            ul(class='sidebar-nav')
-              li 
-                a(href='/catalog') Home
-              li 
+            ul(class='vertical-menu')
                 a(href='/catalog/books') All books
-              li 
                 a(href='/catalog/authors') All authors
-              li 
                 a(href='/catalog/genres') All genres
-              li 
                 a(href='/catalog/bookinstances') All book-instances
-              li 
-                hr
-              li 
+          block sidebar
+            ul(class='vertical-menu')
                 a(href='/catalog/author/create') Create new author
-              li 
                 a(href='/catalog/genre/create') Create new genre
-              li 
                 a(href='/catalog/book/create') Create new book
-              li 
-                a(href='/catalog/bookinstance/create') Create new book instance (copy)
+                a(href='/catalog/bookinstance/create') Create new book instance
                 
         div(class='col-sm-10')
           block content
