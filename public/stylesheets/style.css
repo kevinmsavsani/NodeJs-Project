@@ -27,7 +27,7 @@
   color: white;
 }
 
-h2 {
+.myTitle {
   text-align: center;
 }
 
@@ -50,4 +50,24 @@ li {
 li:before {
   padding-right: 8px;
   color: blue; /* Or a color you prefer */
+}
+
+.card-body  {
+  background-color: #eee; /* Grey background color */
+  color: black; /* Black text color */
+  display: block; /* Make the links appear below each other */
+  padding: 24px; /* Add some padding */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 20px;
+  margin: 24px;
+  height: 200px;
+}
+
+.card-body h2 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
 }

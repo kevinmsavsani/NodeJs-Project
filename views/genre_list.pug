@@ -1,12 +1,15 @@
 extends layout
 
 block content
-  h1= title
+  h1.myTitle #{title}
 
-  ul
+  .row
     each genre in genre_list
-      li
-        a(href=genre.url) #{genre.name}
+      .col-sm-3
+        .card
+          .card-body
+            a.stretched-link(href=genre.url)
+                h2 #{genre.name}
 
     else
-      li There are no genre.
+          li There are no genre.
