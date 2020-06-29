@@ -61,6 +61,7 @@ li:before {
   font-size: 20px;
   margin: 24px;
   height: 200px;
+  width: 300px;
 }
 
 .card-body h2 {
@@ -69,5 +70,16 @@ li:before {
     top: 50%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    width: 250px;
+}
+
+.card-text {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
 }
